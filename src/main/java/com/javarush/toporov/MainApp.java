@@ -16,7 +16,7 @@ public class MainApp {
         System.out.println("Choose key:");
         int shift = Integer.parseInt(scanner.nextLine());
 
-        System.out.println("Do you want to work with a file or a console? \n 1. File \n 2.Console");
+        System.out.println("Do you want to work with a file or a console? \n 1. File \n 2. Console");
         int mode = Integer.parseInt(scanner.nextLine());
 
         String inputText;
