@@ -49,9 +49,14 @@ public class CaesarCipher {
                     }
 
                 }
+
+            }
+            if (!found){
                 result.append(currentChar);
             }
         }
+
+
         return result.toString();
     }
 

@@ -28,12 +28,16 @@ public class MainApp {
             System.out.println("Enter the text:");
             inputText = scanner.nextLine();
         }
+
         String result;
         if (choice == 1) {
             result = CaesarCipher.encrypt(inputText, shift);
         } else {
             result = CaesarCipher.decrypt(inputText, shift);
         }
+
+
+
         if (mode == 1) {
             Files.writeString(Path.of("output.txt"), result, StandardCharsets.UTF_8);
             System.out.println("The result is saved in output.txt");
