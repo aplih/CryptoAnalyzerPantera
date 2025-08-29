@@ -19,29 +19,37 @@ public class MainApp {
         int shift = ui.getKey();
         int mode = ui.getWorkModeChoice();
 
+        // Если пользователь выбрал работу с файлом
         if (mode == 1) {
+            // Получение пути к файлу от пользователя
             path = ui.getFilePath();
+            // Проверка, что путь не пустой
             if (path != null) {
+                // Чтение текста из файла с помощью FileHandler
                 inputText = fh.readStringFromFile(path);
             }
         } else {
+            // Получение текста напрямую из консоли
             inputText = ui.getTextFromConsole();
         }
 
-        if (inputText == null) {
-            System.out.println("No input text was provided. Exiting.");
-            return;
-        }
+
         String result;
+        // Если выбран режим шифрования
         if (choice == 1) {
+            // Шифрование текста
             result = CaesarCipher.encrypt(inputText, shift);
         } else {
             result = CaesarCipher.decrypt(inputText, shift);
         }
 
+        // Если результат нужно сохранить в файл
         if (mode == 1) {
+            // Запись результата в файл
             fh.writeStringToFile(path, result);
+
         } else {
+            // Вывод результата - консоль
             ui.printResult(result);
         }
     }
