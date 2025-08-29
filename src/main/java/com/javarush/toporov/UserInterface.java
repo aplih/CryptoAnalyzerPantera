@@ -59,12 +59,17 @@ public class UserInterface {
 
     // Метод для получения пути к файлу
     public String getFilePath() {
-        // Цикл для проверки, что путь не пустой
         while (true) {
             System.out.println("Enter the path to the file:");
             String path = scanner.nextLine();
+            if (path != null && !path.trim().isEmpty()) {
+                return path;
+            } else {
+                System.out.println("Please specify a valid file path.");
+            }
         }
     }
+
 
     // Метод для получения текста из консоли
     public String getTextFromConsole() {
