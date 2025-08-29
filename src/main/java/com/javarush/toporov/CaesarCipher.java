@@ -2,7 +2,7 @@ package com.javarush.toporov;
 
 public class CaesarCipher {
     public final static char[] ALPHABET_UPPER = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ".toCharArray();
-    public final static char[] ALPHABET_LOWER = "абвгдеёдзийклмнопрстуфхцчшщъыьэюя".toCharArray();
+    public final static char[] ALPHABET_LOWER = "абвгдеёзийклмнопрстуфхцчшщъыьэюя".toCharArray();
 
     public static String encrypt(String text, int shift) {
 
